@@ -19,5 +19,5 @@ wantedColumn.columns = [
     'lat' # 경도
 ]
 
-wantedColumn.to_csv('/Users/sumin/Desktop/sumin/SideProject/MPR_backup/modified_data_seoul')
+wantedColumn.to_csv('/Users/sumin/Desktop/sumin/SideProject/MPR_backup/modified_data_seoul.csv')
 print(wantedColumn)
