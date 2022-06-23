@@ -3,7 +3,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('informations/Incheon.csv')
+df = pd.read_csv('/Users/sumin/Desktop/sumin/SideProject/informations/Incheon.csv')
 df = df.loc[df['상권업종대분류명'] == '음식']
 
 wantedColumn = pd.DataFrame(df, columns=['상호명', '상권업종대분류명', '상권업종중분류명', '상권업종소분류명', '표준산업분류명', '행정동명', '위도', '경도'])
@@ -19,5 +19,5 @@ wantedColumn.columns = [
     'lat' # 경도
 ]
 
-wantedColumn.to_csv('/Users/sumin/Desktop/sumin/SideProject/modified_data_incheon')
+wantedColumn.to_csv('/Users/sumin/Desktop/sumin/SideProject/MPR_backup/modified_data_incheon')
 print(wantedColumn)
