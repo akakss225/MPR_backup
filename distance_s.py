@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 
 # 역정보
-stations = pd.read_csv("subwayLocation1.csv")
+stations = pd.read_csv("stations.csv")
 
 # seoul 음식점 정보
 restaurants = pd.read_csv("modified_data_seoul.csv")
@@ -16,7 +16,7 @@ for r_rowIndex, r_row in restaurants.iterrows():
     r_location = (r_row.loc['lon'], r_row.loc['lat'])
     
     for rowIndex, row in stations.iterrows():
-        st = row.loc['subwayLocation'] # 지하철 역
+        st = row.loc['subwayLocation'] + "역" # 지하철 역
         st_location = (row.loc['lon'], row.loc['lat'])
         
         distance = round(hs(st_location, r_location), 3)
