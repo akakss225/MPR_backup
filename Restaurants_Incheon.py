@@ -1,7 +1,5 @@
 # 서울, 인천, 경기 지역 음식점 주소 및 좌표 데이터 정제
-
 import pandas as pd
-import numpy as np
 
 df = pd.read_csv('/Users/sumin/Desktop/sumin/SideProject/informations/Incheon.csv')
 df = df.loc[df['상권업종대분류명'] == '음식']

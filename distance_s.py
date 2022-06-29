@@ -23,11 +23,11 @@ for r_rowIndex, r_row in restaurants.iterrows():
         
         if distance <= 2:
             if r_row.loc['distance'] > distance:
-                restaurants.loc[r_rowIndex, 'station'] = st
-                restaurants.loc[r_rowIndex, 'distance'] = distance
+                r_row.loc['station'] = st
+                r_row.loc['distance'] = distance
 
 delete = restaurants[restaurants['distance'] == 9999].index
 restaurants.drop(delete, inplace=True)
 
-restaurants.to_csv('/Users/sumin/Desktop/sumin/SideProject/MPR_backup/seoul_data.csv')
+restaurants.to_csv('/Users/sumin/Desktop/sumin/SideProject/MPR_backup/seoul.csv')
 print("success")

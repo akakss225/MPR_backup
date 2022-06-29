@@ -22,7 +22,9 @@ for r_rowIndex, r_row in restaurants.iterrows():
         if r_row.loc['distance'] > distance:
             r_row.loc['station'] = st
             r_row.loc['distance'] = distance
+        if r_row.loc['station'][-1] != "역":
+            r_row.loc['station'] += "역"
     df = df.append(r_row.loc['name':])
 
-df.to_csv('/Users/sumin/Desktop/sumin/SideProject/MPR_backup/incheon.csv')
+df.to_csv('data/incheon.csv')
 print("success")
